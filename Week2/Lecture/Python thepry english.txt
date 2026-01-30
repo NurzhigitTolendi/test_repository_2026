@@ -1,0 +1,25 @@
+Python theory (English)
+
+Python is a programming language: we use it to write instructions that a computer can execute. It is a general-purpose language, meaning it can be used for many different tasks — from simple scripts and automation to web applications, data analysis, and AI.
+
+Why Python is so popular
+Python is close to plain English: it has less “extra” syntax, so beginners can read and write code faster. It also has a huge ecosystem of libraries and frameworks — for web (Django, FastAPI), data (pandas), and machine learning (scikit-learn), and many more. Python is cross-platform as well: the same code usually runs on Windows, macOS, and Linux.
+
+How Python runs
+Python is commonly executed by an interpreter. The code is run step by step (instead of being fully compiled into a single executable beforehand, like in many compiled languages). This makes development faster: you write code, run it, and immediately see results.
+
+How it differs from other languages
+Compared to C/C++, Python is usually easier to read and write, but often slower in raw execution speed because many checks and actions happen at runtime.
+Compared to Java/C#, Python often requires fewer lines of code to achieve the same result and is easier to start with, while Java/C# are frequently chosen in large enterprise systems for stricter typing and established tooling.
+Compared to JavaScript: JavaScript is the main language of the browser, while Python is more common on the server side, automation, and data work (although both can be used in multiple areas).
+
+Key Python features for beginners
+Indentation matters: it defines code blocks instead of curly braces.
+Python is dynamically typed: variable types are inferred automatically, but types still exist and are checked at runtime.
+Python is great for learning because you can go from theory to practice very quickly.
+
+Where Python is used in real life
+Automation and scripting (batch tasks, file processing, reports).
+Web development (backend services and APIs).
+Data Science and Machine Learning (data analysis, building models).
+Testing and DevOps tooling.
