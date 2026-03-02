@@ -17,7 +17,7 @@ import re
 
 text_to_match = "John's email is john.doe@example.com, and his backup is johndoe123@work.net."
 
-pattern = r"email|backup" # our regex
+pattern = r"email|backup|john|net" # our regex
 # matches email or backup
 
 result = re.findall(pattern, text_to_match)

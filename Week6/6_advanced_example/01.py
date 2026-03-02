@@ -12,6 +12,7 @@ results = re.finditer(pattern, text)
 # for result in results:
 #     print(result.group())
 
+
 with open('data.csv', "w", newline='', encoding='utf8') as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(['order', 'name', 'count', 'price'])
