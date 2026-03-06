@@ -7,3 +7,5 @@ file = open(file_name)
 contents = file.read()
 
 print(contents)
+
+file.close()

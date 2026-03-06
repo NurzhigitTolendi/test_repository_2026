@@ -1,6 +1,6 @@
 import os
 
-path = './' # relative path
+path = './' # current working directory 
 # .. - shorthand for previous directory
 # .  - shorthand for current directory
 

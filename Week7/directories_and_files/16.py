@@ -5,4 +5,6 @@ file_name = 'test.txt' # relative path - the file should exist
 with open(file_name, 'r') as file: # by default, files are opened in 'r' mode
     print(f'File {file_name} is closed:', file.closed)
 
+# with block makes close operation automatically 
+
 print(f'File {file_name} is closed:', file.closed)
