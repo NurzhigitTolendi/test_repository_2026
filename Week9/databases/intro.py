@@ -55,7 +55,7 @@ conn = psycopg2.connect(
 
 # SELECT version() is a quick way to verify the connection works
 # It returns the PostgreSQL server version string
-command = """SELECT version()"""
+command = """SELECT * FROM customers where id = 11;"""
 
 with conn.cursor() as cur:
     cur.execute(command)
