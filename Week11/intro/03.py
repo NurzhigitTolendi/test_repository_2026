@@ -11,7 +11,7 @@ COLOR_RED = (255, 0, 0) # Color red in RGB
 # 0 - value for blue
 # each color component has a value between 0 and 255
 # that is, 8 bits
-COLOR_BLUE = (0, 0, 255)
+COLOR_GREEN = (123, 10, 240)
 
 running = True
 is_red = True
@@ -20,7 +20,7 @@ while running: # game loop
         if event.type == pygame.QUIT:
             running = False
         if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_SPACE:
+            if event.key == pygame.K_p:
                 is_red = not is_red # flipping the value
                 # True -> False and vice versa
     
@@ -28,7 +28,7 @@ while running: # game loop
     if is_red:
         screen.fill(COLOR_RED)
     else:
-        screen.fill(COLOR_BLUE)
+        screen.fill(COLOR_GREEN)
     
     pygame.display.flip() # updates the screen
 

@@ -11,7 +11,8 @@ COLOR_RED = (255, 0, 0) # Color red in RGB
 # 0 - value for blue
 # each color component has a value between 0 and 255
 # that is, 8 bits
-COLOR_BLUE = (0, 0, 255)
+COLOR_BLUE = (0, 0, 255) 
+COLOR_CIRCLE = (123, 234, 15)
 
 running = True
 is_red = True
@@ -34,6 +35,6 @@ while running: # game loop
     # the circle is red
     # its center is (100, 100) for x and y respectively
     # its radius is 40
-    pygame.draw.circle(screen, COLOR_RED, (100, 100), 40)
+    pygame.draw.circle(screen, COLOR_CIRCLE, (100, 100), 40)
     
     pygame.display.flip() # updates the screen

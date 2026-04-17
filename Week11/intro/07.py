@@ -20,7 +20,7 @@ circle_y = HEIGHT // 2
 # Bigger steps help, but movement is still choppy -
 # holding the key doesn't keep moving the circle
 # We need a different approach (see 08.py, 09.py and 10.py)
-movement_speed = 10
+movement_speed = 20
 
 running = True
 is_red = True
