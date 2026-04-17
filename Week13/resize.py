@@ -1,15 +1,15 @@
 from PIL import Image
 
-# Открываем изображение
+# open the image
 image = Image.open('homelander.png')
 
-# Указываем новый размер (ширина, высота)
-new_size = (1200, 2700)
+# set new size (width, height)
+new_size = (40, 90)
 
-# Изменяем размер изображения, используя метод бикубической интерполяции для лучшего качества
+# change the image size 
 resized_image = image.resize(new_size, Image.BICUBIC)
 
-# Сохраняем измененное изображение под новым именем
+# saving the new image with the new name
 resized_image.save('homelander_resized2.png')
 
-print("Размер изображения успешно изменен!")
+print("The image size changed successfully!")
