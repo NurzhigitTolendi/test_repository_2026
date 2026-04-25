@@ -10,8 +10,8 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT)) # creating a game window
 # set_mode() takes a tuple as an argument
 
 image_background = pygame.image.load('resources/AnimatedStreet.png')
-image_player = pygame.image.load('resources/Player.png')
-image_enemy = pygame.image.load('resources/Enemy.png')
+image_player = pygame.image.load('resources/invincible.jpg')
+image_enemy = pygame.image.load('resources/conquest.jpg')
 
 pygame.mixer.music.load('resources/background.wav')
 pygame.mixer.music.play(-1)

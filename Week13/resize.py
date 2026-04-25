@@ -1,7 +1,7 @@
 from PIL import Image
 
 # open the image
-image = Image.open('homelander.png')
+image = Image.open('gus.png')
 
 # set new size (width, height)
 new_size = (40, 90)
@@ -10,6 +10,6 @@ new_size = (40, 90)
 resized_image = image.resize(new_size, Image.BICUBIC)
 
 # saving the new image with the new name
-resized_image.save('homelander_resized2.png')
+resized_image.save('gus_resized.png')
 
 print("The image size changed successfully!")

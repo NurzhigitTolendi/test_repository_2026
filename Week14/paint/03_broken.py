@@ -1,7 +1,3 @@
-# first run the code without activating the base_layer
-# then activate the base_layer (uncomment 3 related lines of code) 
-# and run the code again
-
 import pygame
 
 pygame.init()
@@ -10,7 +6,6 @@ WIDTH = 800
 HEIGHT = 600
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-base_layer = pygame.Surface((WIDTH, HEIGHT))
 
 colorRED = (255, 0, 0)
 colorBLUE = (0, 0, 255)
@@ -22,41 +17,35 @@ clock = pygame.time.Clock()
 LMBpressed = False
 THICKNESS = 5
 
-currX = 0
-currY = 0
+mouse_x, mouse_y = pygame.mouse.get_pos()
 
-prevX = 0
-prevY = 0
+curr_x = mouse_x
+curr_y = mouse_y
+
+prev_x = mouse_x
+prev_y = mouse_y
 
 running = True
 
 while running:
-
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
-            print("LMB pressed!")
+            # print("LMB pressed!")
             LMBpressed = True
-            prevX = event.pos[0]
-            prevY = event.pos[1]
-            
+            curr_x = event.pos[0]
+            curr_y = event.pos[1]
+            prev_x = event.pos[0]
+            prev_y = event.pos[1]
         if event.type == pygame.MOUSEMOTION:
-            print("Position of the mouse:", event.pos)
-            if LMBpressed:
-                currX = event.pos[0]
-                currY = event.pos[1]
-                screen.blit(base_layer, (0, 0))
-                pygame.draw.rect(screen, colorRED, pygame.Rect(prevX, prevY, abs(currX-prevX), abs(currY-prevY)), THICKNESS)
-
+            # print("Position of the mouse:", event.pos)
+            curr_x = event.pos[0]
+            curr_y = event.pos[1]
         if event.type == pygame.MOUSEBUTTONUP and event.button == 1:
-            print("LMB released!")
+            # print("LMB released!")
             LMBpressed = False
-            currX = event.pos[0]
-            currY = event.pos[1]
-            pygame.draw.rect(screen, colorRED, pygame.Rect(prevX, prevY, abs(currX-prevX), abs(currY-prevY)), THICKNESS)
-            base_layer.blit(screen, (0, 0))
-
+            pygame.draw.line(screen, colorRED, (prev_x, prev_y), (curr_x, curr_y), THICKNESS)
         if event.type == pygame.KEYDOWN: 
             if event.key == pygame.K_EQUALS:
                 print("increased thickness")
@@ -64,6 +53,11 @@ while running:
             if event.key == pygame.K_MINUS:
                 print("reduced thickness")
                 THICKNESS -= 1
+
+    screen.fill(colorBLACK)
+
+    if LMBpressed:
+        pygame.draw.line(screen, colorRED, (prev_x, prev_y), (curr_x, curr_y), THICKNESS)
 
     pygame.display.flip()
     clock.tick(60)
